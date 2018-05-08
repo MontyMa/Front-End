@@ -1,0 +1,26 @@
+{
+  "name": "demo-koa",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MontyMa1207/demo-koa.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MontyMa1207/demo-koa/issues"
+  },
+  "homepage": "https://github.com/MontyMa1207/demo-koa#readme",
+  "dependencies": {
+    "koa": "^2.5.1",
+    "koa-better-http-proxy": "^0.2.4",
+    "koa-proxy2": "^0.11.0",
+    "koa-router": "^7.4.0",
+    "koa-static": "^4.0.2"
+  }
+}
