@@ -1,5 +1,11 @@
-// const Koa = require('koa');
-// const app = new Koa();
+/**
+ * Created by monty on 2018/1/23.
+ */
+const Koa = require('koa');
+const app = new Koa();
+
+
+
 // const fs = require('fs');
 // const Router = require('koa-router');
 // const home = new Router();
@@ -17,7 +23,6 @@
 //     });
 //   })
 // }
-
 
 
 // // 解析上下文里node原生请求的POST参数
