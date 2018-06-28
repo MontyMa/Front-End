@@ -20,6 +20,16 @@ const UserSchema = new Schema({
     type: String,
     required: true,
   },
+  isAdmin: {
+    type: Boolean,
+    default: false,
+  },
+  meta: {
+    creatTime: {
+      type: Date,
+      default: Date.now()
+    }
+  }
 });
 
 module.exports = mongoose.model('User', UserSchema);
