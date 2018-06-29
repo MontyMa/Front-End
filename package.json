@@ -17,11 +17,13 @@
   },
   "homepage": "https://github.com/MontyMa1207/demo-koa#readme",
   "dependencies": {
+    "bcryptjs": "^2.4.3",
     "koa": "^2.5.1",
     "koa-better-http-proxy": "^0.2.4",
     "koa-bodyparser": "^4.2.1",
     "koa-proxy2": "^0.11.0",
     "koa-router": "^7.4.0",
+    "koa-session": "^5.8.1",
     "koa-static": "^5.0.0",
     "koa-views": "^6.1.4",
     "mongoose": "^5.1.7",

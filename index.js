@@ -8,9 +8,12 @@ const views = require('koa-views');
 const serve = require('koa-static');
 const mongoose = require('mongoose');
 const CONFIG = require('./config');
+const session = require('koa-session');
+const bodyParser = require('koa-bodyparser');
 const app = new Koa();
 
 mongoose.connect(CONFIG.mongodb);
+app.use(bodyParser());
 
 // 启用 nunjucks 模版引擎
 app.use(views(path.join(__dirname, 'views'), {
@@ -18,6 +21,13 @@ app.use(views(path.join(__dirname, 'views'), {
 }));
 
 app.use(serve(path.join(__dirname, 'public')));
+
+// session
+// app.keys = ['somethings'];
+app.use(session({
+  key: CONFIG.session.key,
+  maxAge: CONFIG.session.maxAge,
+}, app));
 
 // 使用路由
 router(app);

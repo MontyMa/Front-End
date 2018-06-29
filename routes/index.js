@@ -7,7 +7,10 @@ const router = require('koa-router')();
 module.exports = (app) => {
   router.get('/', require('./home').index);
   router.get('/about', require('./about').about);
-  router.get('/signUp', require('./user').signUp);
+
+  let user = require('./user');
+  router.get('/signup', user.index);
+  router.post('/api/signup', user.signUp);
 
   app.use(router.routes());
   app.use(router.allowedMethods());
